@@ -1,0 +1,30 @@
+[project]
+name = "hictc-web-scraper"
+version = "0.1.0"
+description = "Export Huawei ICT Academy course content (digital textbooks, in-page sections, EDM documents) to text and PDF"
+readme = "README.md"
+authors = [
+    { name = "Timothy James Concepcion", email = "concepciontimothy@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "cryptography>=50.0.2",
+    "lxml>=6.1.3",
+    "pillow>=12.3.0",
+    "playwright>=1.63.0",
+    "pypdf>=6.19.0",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+hictc-web-scraper = "hictc_web_scraper:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
